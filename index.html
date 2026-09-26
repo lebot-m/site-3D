@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour en Ruine 3D</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <!-- Canvas WebGL en arrière-plan -->
+  <canvas id="webgl"></canvas>
+
+  <!-- Barre de Navigation superposée -->
+  <nav class="navbar">
+    <button data-section="home" class="nav-btn active">Accueil</button>
+    <button data-section="about" class="nav-btn">À Propos</button>
+    <button data-section="contact" class="nav-btn">Contact</button>
+    <button data-section="spare1" class="nav-btn">spare1</button>
+    <button data-section="spare2" class="nav-btn">spare2</button>
+    <button data-section="spare3" class="nav-btn">spare3</button>
+  </nav>
+
+  <!-- Contenu textuel des sections -->
+  <main class="ui-container">
+    <section id="ui-home" class="ui-section active">
+      <h1>La Tour Ancienne</h1>
+      <p>Explorez les ruines à travers la navigation 3D.</p>
+    </section>
+
+    <section id="ui-about" class="ui-section">
+      <h2>À Propos du Projet</h2>
+      <p>Découverte des vestiges d'une époque oubliée...</p>
+    </section>
+
+    <section id="ui-contact" class="ui-section">
+      <h2>Me Contacter</h2>
+      <form class="contact-form" onsubmit="event.preventDefault();">
+        <input type="text" placeholder="Votre nom" required />
+        <input type="email" placeholder="Votre email" required />
+        <textarea placeholder="Votre message" rows="4"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
